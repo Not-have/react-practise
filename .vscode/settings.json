@@ -13,7 +13,7 @@
 	"prettier.spaceBeforeFunctionParen": true,
 	// react的jsx让>与结束标签同行
 	"prettier.jsxBracketSameLine": true,
-	"prettier.bracketSpacing": false, // 去掉数组内部前后的空格
+	"prettier.bracketSpacing": true, // 去掉数组内部前后的空格
 	"prettier.semi": false, // 不要给语句加;
 	"prettier.singleQuote": true, // 采用单引号
 	"prettier.trailingComma": "none", // 不要尾随逗号,
@@ -26,7 +26,7 @@
 		"editor.defaultFormatter": "remimarsal.prettier-now"
     },
     "[javascript]": {
-        "editor.defaultFormatter": "remimarsal.prettier-now"
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "beautify.config": {
 		"brace_style": "collapse,preserve-inline",
