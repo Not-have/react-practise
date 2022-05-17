@@ -22,3 +22,4 @@ export default class App5 extends Component {
 		// 验证结果：this.setState是异步的
 	}
 }
+

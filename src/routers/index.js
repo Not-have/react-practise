@@ -1,10 +1,4 @@
-/* 
-    路由有两种模式：
-    一种是HashRouter，带有#，
-    一种是BrowserRouter，不带#，但需要后端支持修改根目录地址
-    开发阶段可以先使用BrowserRouter
-*/
-import { HashRouter, Routes, Route, NavLink } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom'
 import getInvoices from './menu.js'
 import Home from '../pages/home/Index.jsx'
 import State from '../pages/setState是异步的/Index.jsx'
@@ -13,10 +7,24 @@ import HomeTwo from '../pages/home-two/index.js'
 import NotFound from '../pages/error/404'
 import SetState from '../pages/setState是异步的/Index.jsx'
 import Mine from '../pages/mine/Mine.jsx'
+import UseStatePage from '../pages/hook/useState.jsx'
+import UseEffect from '../pages/hook/useEffect'
+import UseEffectSideEffect from '../pages/hook/UseEffectSideEffect'
+import Axios1 from '../pages/request/axios1'
+import UseRefDom from '../pages/hook/useRef'
+import UseContext from '../pages/hook/useContext'
+import FatherAndSon from '../pages/communication/fatherAndSon'
+import ReverseFather from '../pages/communication/reverseFather'
+import Brother from '../pages/communication/brother'
+import ContextTop from '../pages/communication/Context'
+import Props from '../pages/communication/props'
+import UseCallback from '../pages/hook/useCallback'
+import UseMemo from '../pages/hook/useMemo'
+import ReduceComponentLevel from '../pages/hook/useReducer-useContext'
 // 定义一个纯路由组件
 const BasicRoute = () => {
 	return (
-		<HashRouter>
+		<BrowserRouter>
 			<div className="menu">
 				{getInvoices().map((item, index) => {
 					return (
@@ -24,7 +32,6 @@ const BasicRoute = () => {
 							key={index}
 							to={item.path}
 							style={({ isActive }) => {
-								console.log(isActive)
 								return {
 									display: 'inline-block',
 									marginLeft: '20px',
@@ -36,6 +43,7 @@ const BasicRoute = () => {
 					)
 				})}
 			</div>
+			<hr />
 			<Routes>
 				{/* 谁的二级路由，就写在谁的里面 */}
 				<Route path="/home" element={<Home />}>
@@ -47,10 +55,31 @@ const BasicRoute = () => {
 				<Route path="/state" element={<State />} />
 				<Route path="/setState" element={<SetState />} />
 				<Route path="/mine" element={<Mine />} />
+				<Route path="/useState" element={<UseStatePage />} />
+				<Route path="/UseEffect" element={<UseEffect />} />
+				<Route
+					path="/UseEffectSideEffect"
+					element={<UseEffectSideEffect />}
+				/>
+				<Route path="/Axios1" element={<Axios1 />} />
+				<Route path="/UseRefDom" element={<UseRefDom />} />
+				<Route path="/useContext" element={<UseContext />} />
+				<Route path="/FatherAndSon" element={<FatherAndSon />} />
+				<Route path="/ReverseFather" element={<ReverseFather />} />
+				<Route path="/Brother" element={<Brother />} />
+				<Route path="/ContextTop" element={<ContextTop />} />
+				<Route path="/props" element={<Props />} />
+				<Route path="/UseCallback" element={<UseCallback />} />
+				<Route path="/UseMemo" element={<UseMemo />} />
+				<Route
+					path="/ReduceComponentLevel"
+					element={<ReduceComponentLevel />}
+				/>
+
 				<Route path="/" element={<Home />} />
 				<Route path="*" element={<NotFound />} />
 			</Routes>
-		</HashRouter>
+		</BrowserRouter>
 	)
 }
 
