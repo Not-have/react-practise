@@ -5,4 +5,4 @@
 ![](./assets/error1.jpg)
 
 解决方法(修改完成后，重启 vsc)：
-![const env = process.env.BABEL_ENV || process.env.NODE_ENV || 'development';](./src/assets/solve1.jpg)
+![const env = process.env.BABEL_ENV || process.env.NODE_ENV || 'development';](./assets/solve1.jpg)
