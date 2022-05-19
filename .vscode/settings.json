@@ -1,6 +1,6 @@
 {
     // 编辑器设置 - 保存时做格式化
-	"editor.formatOnSave": true,
+	"editor.formatOnSave": false,
 	// 编辑器设置 - 默认采用prettier-now做格式化
 	// 如果使用的是prettier，这的设置应该是 esbenp.prettier-vscode
 	// "editor.defaultFormatter": "remimarsal.prettier-now",
@@ -49,7 +49,7 @@
 	"eslint.validate": [],
 	// 保存后，根据eslint格式化
 	"editor.codeActionsOnSave": {
-		"source.fixAll.eslint": true
+		"source.fixAll.eslint": false
 	},
 	"commentTranslate.targetLanguage": "zh-CN",
 	"commentTranslate.hover.enabled": true,
