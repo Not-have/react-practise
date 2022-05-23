@@ -21,6 +21,8 @@ import Props from '../pages/communication/props'
 import UseCallback from '../pages/hook/useCallback'
 import UseMemo from '../pages/hook/useMemo'
 import ReduceComponentLevel from '../pages/hook/useReducer-useContext'
+import ReduxTest1 from '../pages/Redux/Redux-test1'
+import ReduxTest1Details from '../pages/Redux/two-router/redux-test1-details'
 // 定义一个纯路由组件
 const BasicRoute = () => {
 	return (
@@ -76,6 +78,8 @@ const BasicRoute = () => {
 					path="/ReduceComponentLevel"
 					element={<ReduceComponentLevel />}
 				/>
+				<Route path="/ReduxTest1" element={<ReduxTest1 />} />
+				<Route path="/redux-test1-details" element={<ReduxTest1Details />} />
 
 				<Route path="/" element={<Home />} />
 				<Route path="*" element={<NotFound />} />

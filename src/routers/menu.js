@@ -70,6 +70,10 @@ const invoices = [
 	{
 		path: '/reduceComponentLevel',
 		title: ' useReducer和useContext(减少组件层级)'
+	},
+	{
+		path: '/ReduxTest1',
+		title: ' Redux的基础使用'
 	}
 ]
 export default function getInvoices() {
